@@ -1,7 +1,532 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Roteiro de expansão</title>
-<meta http-equiv="refresh" content="0; url=https://dev-seven7.github.io/rob-expansao-gravacao-1711/">
-<style>body{margin:0;padding:40px 16px;font:16px/1.6 system-ui,sans-serif;background:#f3efe7;color:#1a1916}@media (prefers-color-scheme:dark){body{background:#121110;color:#f2eee6}}a{color:inherit}</style>
-</head><body><p>Este direcionamento foi unificado no roteiro de gravação: <a href="https://dev-seven7.github.io/rob-expansao-gravacao-1711/">dev-seven7.github.io/rob-expansao-gravacao-1711</a></p></body></html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roteiro · Expansão Øliver's · gravação 19/11</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#F7F7F7; --paper:#FFFFFF; --cream:#F5F0E8;
+    --ink:#1A1A1A; --ink-2:#3A3A3A; --ink-3:#6B6B6B;
+    --line:#DADADA; --line-soft:#E8E8E8;
+    --brown:#603F2E; --black:#000000; --alert:#9A3B1E;
+    --shadow:0 1px 2px rgba(0,0,0,.04), 0 20px 50px -34px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:"Geist",system-ui,sans-serif;font-weight:300;padding-bottom:env(safe-area-inset-bottom,0px)}
+  .wrap{max-width:900px;margin:0 auto;padding:0 16px}
+
+  .upd{background:var(--cream);border-bottom:1px solid var(--line-soft);font-size:13px;line-height:1.5;color:var(--ink)}
+  .upd .wrap{padding:10px 16px}
+  .upd b{font-weight:500}
+
+  .cover{background:var(--black);color:#fff;padding:72px 0 56px}
+  .eyebrow{font-size:11.5px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:#C9B8A8;margin-bottom:18px}
+  .cover h1{font-family:"Baskervville",Georgia,serif;font-weight:400;font-size:clamp(38px,7.5vw,70px);line-height:1.02;margin:0 0 22px;letter-spacing:-.01em}
+  .cover h1 em{font-style:italic;color:#E8DCCD}
+  .cover .lead{font-size:clamp(15px,2vw,18px);line-height:1.65;max-width:60ch;color:#D6D6D6;margin:0 0 32px}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 32px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#9A9A9A}
+  .meta b{color:#fff;font-weight:500}
+
+  nav.toc{background:var(--paper);border-bottom:1px solid var(--line-soft);position:sticky;top:0;z-index:5}
+  nav.toc .wrap{display:flex;gap:6px 20px;flex-wrap:wrap;padding:12px 16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+  nav.toc a{color:var(--ink-2);text-decoration:none}
+  nav.toc a:hover{color:var(--brown)}
+
+  section{padding:48px 0;border-bottom:1px solid var(--line-soft)}
+  section:last-of-type{border-bottom:none}
+  .kicker{font-size:11.5px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--brown);margin-bottom:10px}
+  h2{font-family:"Baskervville",Georgia,serif;font-weight:400;font-size:clamp(28px,4.4vw,42px);line-height:1.08;margin:0 0 20px}
+  h2 em{font-style:italic;color:var(--brown)}
+  p{line-height:1.7;color:var(--ink-2)}
+  .lead{font-size:clamp(16px,2vw,18.5px);max-width:64ch}
+  a{color:var(--brown)}
+
+  .logi{background:var(--paper);padding:24px 26px;border-top:2px solid var(--black);margin-top:20px;box-shadow:var(--shadow)}
+  .logi dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;margin:0}
+  .logi dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap;padding-top:2px}
+  .logi dd{margin:0;color:var(--ink);line-height:1.55}
+  .logi .note{margin-top:16px;padding-top:16px;border-top:1px solid var(--line-soft);font-size:14px;color:var(--ink-2)}
+
+  .tl{display:grid;gap:0;margin-top:18px;border-left:2px solid var(--black)}
+  .tl div{padding:12px 0 12px 20px;position:relative}
+  .tl div::before{content:"";position:absolute;left:-6px;top:19px;width:10px;height:10px;border-radius:50%;background:var(--black)}
+  .tl b{font-weight:500;color:var(--ink)}
+  .tl span{display:block;color:var(--ink-2);font-size:14.5px;line-height:1.55}
+
+  .bloco-head{margin-bottom:22px}
+  .qtag{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--brown);margin-bottom:8px;font-weight:500}
+  .bloco-head p{max-width:70ch}
+
+  .ep{background:var(--paper);padding:24px 26px;border-top:2px solid var(--black);margin-bottom:18px;box-shadow:var(--shadow)}
+  .ep.brown{border-top-color:var(--brown)}
+  .ep-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 20px;margin-bottom:12px}
+  .epn{font-family:"Baskervville",Georgia,serif;font-size:22px;color:var(--ink)}
+  .who{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brown);font-weight:500}
+  .why{font-size:15px;color:var(--ink-2);margin:0 0 6px;line-height:1.55}
+  .label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin:18px 0 8px}
+  .fala{background:var(--cream);padding:14px 18px;margin:6px 0;font-family:"Baskervville",Georgia,serif;font-size:18.5px;font-style:italic;color:var(--ink);line-height:1.5}
+  .fala small{display:block;font-family:"Geist",sans-serif;font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+  ol.takes,ul.q{margin:0;padding-left:20px;color:var(--ink-2);line-height:1.65;font-size:15px}
+  .row{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--ink-3);margin-top:14px}
+  .row b{color:var(--ink);font-weight:500}
+  .warn{border-left:3px solid var(--alert);background:#FBF3EF;padding:10px 14px;margin-top:14px;font-size:14px;color:var(--ink);line-height:1.55}
+
+  table{width:100%;border-collapse:collapse;background:var(--paper);box-shadow:var(--shadow);font-size:14.5px}
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line-soft);vertical-align:top;line-height:1.5}
+  th{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);font-weight:500;background:var(--cream)}
+  .tbl{overflow-x:auto;margin-top:16px}
+
+  .regras{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+  .regras > div{padding:22px 24px}
+  .regras .sim{background:var(--paper);border-top:2px solid var(--black);box-shadow:var(--shadow)}
+  .regras .nao{background:var(--black);color:#E6E6E6}
+  .regras h3{margin:0 0 10px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500}
+  .regras .nao h3{color:#fff}
+  .regras li{margin:6px 0;line-height:1.55;font-size:14.5px}
+
+  .check li{list-style:none;margin:8px 0;padding-left:26px;position:relative;line-height:1.55;color:var(--ink-2)}
+  .check li::before{content:"";position:absolute;left:0;top:4px;width:14px;height:14px;border:1.5px solid var(--ink)}
+  .check{padding-left:0}
+
+  footer{padding:28px 0 48px;color:var(--ink-3);font-size:12.5px;line-height:1.6}
+  @media (max-width:640px){
+    .cover{padding:52px 0 40px} section{padding:36px 0}
+    .logi dl{grid-template-columns:1fr} .logi dt{padding-top:8px}
+    .regras{grid-template-columns:1fr}
+    .ep{padding:20px 18px}
+  }
+</style>
+</head>
+<body>
+
+<div class="upd"><div class="wrap"><b>Link único da gravação · atualizado em 19/11</b>: roteiro + gestão de criativos da Ghost + direcionamento da Manu (dados e ganchos por praça, temas de apoio), tudo nesta página. Gravação hoje, quinta 19/11. Decisões em <a href="https://github.com/dev-seven7/cs-rob-food/issues/127" target="_blank" rel="noopener">cs-rob-food#127</a>.</div></div>
+
+<header class="cover"><div class="wrap">
+  <div class="eyebrow">Øliver's × Seven7 · roteiro de gravação</div>
+  <h1>Expansão: <em>franquia, não comida</em></h1>
+  <p class="lead">Gravação enxuta com o Matheus pra campanha de expansão da Øliver's voltar a rodar. Os leads chegam sem perfil (fornecedor, quem procura emprego, quem nem sabia do que se tratava). Cada peça daqui fala da Øliver's com quem tem capital, já opera comida ou mora numa das 6 praças prioritárias, e filtra quem não é.</p>
+  <div class="meta">
+    <span>Gravação <b>hoje, quinta 19/11</b></span>
+    <span>Com <b>Matheus</b></span>
+    <span>Captação <b>Luiza</b></span>
+    <span>Edição <b>com o agente</b></span>
+  </div>
+</div></header>
+
+<nav class="toc"><div class="wrap">
+  <a href="#plano">Plano</a><a href="#pracas">A · Praças</a><a href="#temas">Temas de apoio</a><a href="#conversao">B · Conversão</a><a href="#fotos">C · Fotos</a><a href="#entrevista">D · Matheus responde</a><a href="#topo">E · Topo</a><a href="#bruto">Material bruto</a><a href="#regras">Regras</a><a href="#pend">Pendências</a>
+</div></nav>
+
+<section id="plano"><div class="wrap">
+  <div class="kicker">Plano</div>
+  <h2>O que sai da gravação <em>e quando roda</em></h2>
+  <p class="lead">A base é o brief da Performance (Ghost, <a href="https://ghostlab7.notion.site/ROB-Gest-o-de-Criativos-Nov26-40e7c4619410813dbc4ee670f5193756" target="_blank" rel="noopener">ROB · Gestão de Criativos Nov26</a>), o direcionamento da Manu (dados e ganchos por praça e temas de apoio, já incorporados nesta página) e as decisões da call de 17/11. O funil agora é de marca única: criativo só da Øliver's leva pra LP só da Øliver's. O Grupo ROB entra no máximo como respaldo, nunca como chamada. Daqui saem só as peças em que o Matheus é a voz. As peças dos outros sócios (Jimmy, Edilson, Mathias, Felipe, Igor) ficam pra captação completa da semana que vem.</p>
+  <div class="logi">
+    <dl>
+      <dt>Quando</dt><dd><b>Hoje, quinta 19/11</b>, no escritório</dd>
+      <dt>Onde</dt><dd>[a confirmar] · de preferência com cozinha em operação ao fundo e 2 ou 3 cantos diferentes (cozinha, balcão, mesa/escritório). Cozinha e balcão casam com as versões delivery, mesa com as versões salão</dd>
+      <dt>Quem</dt><dd><b>Matheus</b> na frente da câmera · <b>Luiza</b> capta, sozinha</dd>
+      <dt>Pedir ao Matheus</dt><dd>3 trocas de roupa (camisa lisa, sem estampa de outra marca), porque cada peça pede roupa, lugar e fala diferentes</dd>
+      <dt>Formato</dt><dd><b>Orgânico e espontâneo:</b> a gente dá a base e o Matheus fala do jeito dele, nada decorado. Gancho no 1º segundo, uma ideia por take, até 30 s. Foco na marca: o franqueado se interessa pela Øliver's, não pelo grupo</dd>
+      <dt>Levar</dt><dd>Tripé, lapela, luz, celular em 9:16 (4K, se der), roteiro no celular pra ele ler antes de cada take</dd>
+      <dt>Anúncios</dt><dd><b>Topo:</b> visualização de vídeo + novos seguidores · <b>Fundo:</b> lead pela LP da Øliver's. A estrutura já está no ar, só falta receber os criativos</dd>
+    </dl>
+    <p class="note"><b>Ordem de prioridade:</b> A (praças) → B (conversão) → C (fotos, 10 min, não pular: estático segue prioridade) → D (Matheus responde) → E (topo). Se o tempo acabar, o que não pode faltar são as praças e a conversão. <b>Claquete falada antes de cada take</b> ("Barra, salão, gancho 2"), pra edição separar por praça e versão. Em toda peça, gravar 2 ou 3 versões do gancho (a 1ª frase). O melhor sai na edição.</p>
+  </div>
+
+  <div class="tl">
+    <div><b>Hoje, 19/11</b><span>Gravação com o Matheus (este roteiro)</span></div>
+    <div><b>Logo depois da gravação</b><span>Luiza sobe o bruto no Drive, já separado pela claquete</span></div>
+    <div><b>Edição com o agente</b><span>Cortes, legenda e b-roll, separados por praça e por versão (delivery e salão) · Manu aprova</span></div>
+    <div><b>Entrega à Ghost</b><span>Os 10 criativos por praça já editados vão hoje pro Celso. O que sair desta gravação complementa a campanha</span></div>
+  </div>
+</div></section>
+
+<section id="pracas"><div class="wrap">
+  <div class="bloco-head">
+    <div class="qtag">Bloco A · praças · ~30 min</div>
+    <h2>Praças: <em>um roteiro, seis regiões</em></h2>
+    <p>Reels #22 (15 a 20 s) + Estático #12. A expansão é local e a Øliver's foca só nas 6 regiões prioritárias da call de 17/11. O Matheus grava a fala de cada praça em sequência, trocando de roupa entre a Leva 1 e a Leva 2. Nas praças com delivery e salão, o gancho sai em <b>duas versões</b>, uma pro público de delivery e outra pro de salão, pro Celso separar por público. A imagem do lugar real entra na edição (banco, arquivo ou captação depois).</p>
+  </div>
+
+  <article class="ep">
+    <div class="ep-head"><span class="epn">Estrutura de cada versão</span><span class="who">Matheus</span></div>
+    <ol class="takes">
+      <li>Claquete falada: praça, versão e número do gancho ("Tijuca, delivery, gancho 1")</li>
+      <li>Gancho local (tabela abaixo), com imagem real do lugar</li>
+      <li>Matheus falando da região: <b>um motivo, em uma frase, dele</b>. Sem prometer ponto</li>
+      <li>"Franquia Øliver's em [praça]. Capital a partir de R$ 300 mil. Consulte a disponibilidade pra sua região."</li>
+      <li>Capital e assinatura Øliver's</li>
+    </ol>
+    <div class="row"><span>CTA <b>Consulte a sua região</b> (fundo: leva pra LP da Øliver's)</span><span>Estático <b>"[Praça]: consulte a disponibilidade" + mapa estilizado, sem endereço + capital</b></span></div>
+    <div class="row"><span>Delivery <b>quem quer uma operação enxuta, focada em cozinha e pedido, sem salão pra gerir</b></span><span>Salão <b>quem quer restaurante de bairro, com rodízio, ponto de encontro de família e grupo</b></span></div>
+    <div class="warn">Praça com unidade pode não ter ponto disponível. Ele fala "consulte a disponibilidade", nunca promete ponto nem endereço.</div>
+  </article>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Leva</th><th>Praça</th><th>Gancho delivery</th><th>Gancho salão</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Tijuca</td><td>Você mora na Tijuca, já é cliente da Øliver's e procura onde investir? Uma Øliver's de delivery é operação enxuta: cozinha e pedido.</td><td>A Tijuca é bairro de família. Já pensou em ser dono de uma Øliver's com rodízio aqui?</td></tr>
+      <tr><td>1</td><td>Barra</td><td>A Barra é o bairro com mais restaurante no Rio. Quem abre delivery do zero compete com todo mundo. Quem abre uma Øliver's chega com marca e cardápio que o cliente já pede.</td><td>Mora na Barra e juntou o dinheiro? Um salão Øliver's, com rodízio, é ponto de encontro de família e grupo. E o time escolhe o ponto com você.</td></tr>
+      <tr><td>1</td><td>Macaé</td><td>Você trabalha embarcado e pensa num segundo negócio que não dependa de você o dia todo? Uma Øliver's de delivery em Macaé chega com fábrica, cardápio e um time do seu lado.</td><td>Macaé ainda não tem um rodízio de pizza com cara de marca grande. Quem vai abrir a primeira Øliver's da cidade?</td></tr>
+      <tr><td>1</td><td>Rio das Ostras</td><td>Rio das Ostras cresceu quase 50% em 12 anos, e a Øliver's já é forte em Cabo Frio e Araruama. O próximo delivery pode ser aí, com você.</td><td>Rio das Ostras é litoral e família. Quem vai abrir o salão da Øliver's na cidade?</td></tr>
+      <tr><td>2</td><td>Recreio</td><td>O Recreio não para de crescer, mas abrir delivery do zero é descobrir no bolso o que dá errado. Na Øliver's isso foi resolvido em 9 anos.</td><td><b>⚠️ confirmar</b> · o direcionamento traz o Recreio só com delivery. Se tiver salão: "O Recreio é família jovem e pouca opção perto. Quem abre a Øliver's com rodízio aqui?"</td></tr>
+      <tr><td>2</td><td>Méier</td><td>Você mora no Méier e procura onde investir? Já pensou em ser dono de uma Øliver's de delivery aqui?</td><td><b>⚠️ confirmar</b> se o Méier tem salão · se tiver: "Por que o Méier está no mapa da Øliver's?"</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:14px;margin-top:14px">Leva 1: as 4 praças com delivery e salão, 2 versões cada. Leva 2: Recreio e Méier, que ainda dependem de confirmar o salão. Se não houver confirmação até a gravação, gravar as duas versões mesmo assim: a edição sai só da que valer. Saíram do roteiro em 17/11, fora das regiões prioritárias: Copacabana, Niterói, Botafogo, Lapa e Centro, Região Oceânica, São Gonçalo, Maricá + Itaipuaçu e Araruama.</p>
+
+  <h3 style="margin-top:34px">Dados e ganchos extras por praça</h3>
+  <p style="font-size:14px">Dados que o Matheus pode citar (opcionais) e mais opções de gancho, na linha de venda de franquia que a gente já usa: a dor de quem investe, o que vem pronto, o número e o time do lado. Ele escolhe e adapta. <b>Fecho de toda praça:</b> "Franquia Øliver's em [praça]. Consulte a disponibilidade."</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Praça</th><th>Dados (opcionais)</th><th>Ganchos extras</th></tr></thead>
+    <tbody>
+      <tr><td>Tijuca<br><small>delivery + salão</small></td><td>Bairro tradicional da Zona Norte, de família, com comércio forte em volta da Saens Peña · cerca de 180 mil moradores · 5º bairro da cidade em bares e restaurantes formais (3,6% do total)</td><td>"Imóvel, CDB, ações. Você já sabe ler um ativo. Então lê este: uma Øliver's na Tijuca."<br><br>"Abrir pizzaria do zero na Tijuca é aprender tudo errando. Uma Øliver's começa de outro lugar: fábrica própria, cardápio que o cliente já pede e um time do seu lado."</td></tr>
+      <tr><td>Barra<br><small>delivery + salão</small></td><td>Condomínios fechados, classe média e alta, maior concentração de shoppings do Rio · cerca de 200 mil moradores · 1º bairro do Rio em bares e restaurantes formais: 12,3% de todos os estabelecimentos da cidade</td><td>"Você já leu muito anúncio de franquia prometendo o mundo. Nenhum diz de onde vem o número. A gente diz."<br><br>"Mora na Barra e juntou o dinheiro? A parte difícil é decidir onde ele trabalha sem você virar especialista. Na Øliver's, o time escolhe o ponto com você."</td></tr>
+      <tr><td>Recreio<br><small>só delivery</small></td><td>Bairro que mais cresce na região: família jovem, condomínio novo, pouca opção perto · cerca de 165 mil moradores · junto com Jacarepaguá, lidera a abertura de novos empreendimentos</td><td>"Muita franquia vende a marca, entrega um manual e some. Na Øliver's, o time escolhe o ponto no Recreio com dado de demanda e fica do seu lado depois que a porta abre."</td></tr>
+      <tr><td>Macaé<br><small>delivery + salão</small></td><td>Capital nacional do petróleo, polo da Bacia de Campos · cerca de 246 mil moradores (Censo 2022), estimativa de 264 mil em 2025 · PIB per capita de cerca de R$ 91 mil (2023), acima da média do estado</td><td>"Investimento, taxa, royalties, payback: você já sabe os termos. O que você não acha em outra franquia é o que vem pronto na Øliver's. Macaé está no nosso mapa."</td></tr>
+      <tr><td>Rio das Ostras<br><small>delivery + salão</small></td><td>Litoral, qualidade de vida, entre Macaé e a Região dos Lagos, onde a Øliver's já é forte (Cabo Frio, Araruama) · cerca de 156 mil moradores (Censo 2022) · cresceu 48% desde 2010, o 2º maior crescimento do estado, atrás só de Maricá</td><td>"Pesquisou franquia, gostou e ainda está pensando? Em 30 minutos você vê os números da Øliver's e se tem ponto com demanda em Rio das Ostras."</td></tr>
+      <tr><td>Méier</td><td>Sem dados levantados ainda</td><td>Usar os ganchos da tabela acima</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section id="temas"><div class="wrap">
+  <div class="kicker">Se travar</div>
+  <h2>Temas de apoio <em>pro Matheus</em></h2>
+  <p class="lead">Base pra ele puxar quando quiser variar a fala ou se travar em algum take. Uma ideia por take.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Tema</th><th>O que falar</th><th>Gancho</th></tr></thead>
+    <tbody>
+      <tr><td>1 · A dor de quem abre do zero</td><td>O primeiro ano é errando: a massa que não aguenta o delivery, o fornecedor que atrasa, o cardápio que ninguém pede. Cada erro sai do bolso. Na Øliver's isso foi resolvido em 9 anos de operação</td><td>"Sabe o que acontece no primeiro ano de quem abre pizzaria do zero?"</td></tr>
+      <tr><td>2 · O que já vem pronto</td><td>Fábrica própria, insumos porcionados (nem de pizzaiolo você precisa), central de compras com Catupiry, Seara e Coca-Cola, cardápio validado. Rodízio, à la carte premium, delivery, canal próprio e marketplace</td><td>"Quando você abre uma Øliver's, isso aqui já chega pronto."</td></tr>
+      <tr><td>3 · Você não fica sozinho</td><td>Muita franquia vende a marca, entrega um manual e some. Aqui o time escolhe o ponto com dado de demanda, acompanha a obra, especifica o maquinário, contrata e treina a equipe e cadastra nos marketplaces. Depois que abre, segue acompanhando os indicadores</td><td>"A operação é sua, mas você não fica sozinho nela nenhum dia."</td></tr>
+      <tr><td>4 · O número</td><td>Faturamento médio por operação. <b>⚠️ Confirmar com o Matheus antes de gravar:</b> o direcionamento usa "R$ 3 milhões por ano por operação", mas a regra da Ghost é não prometer faturamento (ver "Sempre e nunca")</td><td>"Quanto fatura uma Øliver's? Eu te conto."</td></tr>
+      <tr><td>5 · Investidor de fora do ramo</td><td>Quem tem clínica, imobiliária ou outro negócio e pensa num segundo. Também o dono de restaurante que pensa numa segunda operação</td><td>"Imóvel, CDB, ações. Você já sabe ler um ativo. Então lê este: uma Øliver's." · "Você já opera comida?"</td></tr>
+      <tr><td>6 · Marca que aparece</td><td>Mídia, parcerias com filmes e grandes marcas, eventos como a Corrida do Pelé, 190 mil seguidores. Marketing rodando antes de você abrir a porta</td><td>"Você não abre uma pizzaria desconhecida. Você abre uma Øliver's."</td></tr>
+      <tr><td>7 · Pro fã</td><td>Cliente antigo que pode virar dono</td><td>"É cliente da Øliver's há anos? Já pensou em ser dono de uma?"</td></tr>
+      <tr><td>8 · Pra quem ainda está pensando</td><td>Conversa curta, sem compromisso</td><td>"Em 30 minutos você vê os números, o modelo que cabe no seu aporte e se tem ponto na sua região."</td></tr>
+      <tr><td>9 · Grupo ROB (só 1 take)</td><td>Pizza, burger e japa têm horários de pico diferentes. No mesmo ponto, uma marca ocupa as horas que a outra deixa vazias</td><td>"Toda cozinha tem um relógio."</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:14px;margin-top:14px">A caixinha de perguntas do direcionamento é a mesma lista do Bloco D (Matheus responde). As respostas também viram stories durante a semana (Luiza) e depois ads.</p>
+</div></section>
+
+
+<section id="conversao"><div class="wrap">
+  <div class="bloco-head">
+    <div class="qtag">Bloco B · fundo e meio de funil · ~30 min</div>
+    <h2>Conversão: <em>filtrar e abrir a conversa</em></h2>
+    <p>O problema de hoje é a qualidade do lead, não o volume. Essas quatro peças dizem franquia Øliver's e capital logo de cara e mostram o caminho até a assinatura. Rodam no fundo do funil, com lead pela LP da Øliver's.</p>
+  </div>
+
+  <article class="ep">
+    <div class="ep-head"><span class="epn">Reels #08 · 3 perguntas antes de chamar</span><span class="who">Matheus · 15 a 20 s</span></div>
+    <p class="why">Prepara o lead e filtra antes da conversa. É a resposta mais direta pro lead sem perfil.</p>
+    <div class="label">Fala</div>
+    <div class="fala">"Antes de chamar a gente, responde 3 coisas. Quanto você tem pra investir? Em qual região? E quando quer abrir? Com essas 3 respostas, fala com a expansão."<small>gancho alternativo: "Quer abrir uma Øliver's? Antes, responde 3 coisas." · se der tempo, uma versão por praça: "Quer abrir uma Øliver's na Barra?"</small></div>
+    <div class="label">Takes</div>
+    <ol class="takes">
+      <li>Matheus olhando pra câmera, já com o gancho no 1º segundo</li>
+      <li>"1. Quanto você tem pra investir?" (um corte por pergunta, com lettering)</li>
+      <li>"2. Em qual região?"</li>
+      <li>"3. Quando quer abrir?" e fecha com o CTA</li>
+    </ol>
+    <div class="row"><span>Copy <b>Quer abrir uma Øliver's? Capital a partir de R$ 300 mil. Antes de chamar, responda: quanto vai investir, em qual região e quando quer abrir.</b></span></div>
+    <div class="row"><span>CTA <b>Chama a expansão com as 3 respostas</b></span></div>
+  </article>
+
+  <article class="ep">
+    <div class="ep-head"><span class="epn">Reels #23 · Quem te atende é gente</span><span class="who">Matheus · 15 a 20 s</span></div>
+    <p class="why">Responde ao "não quero falar com robô". O brief prevê a Dai ou o Matheus: nesta gravação sai a versão do Matheus.</p>
+    <div class="label">Fala</div>
+    <div class="fala">"Antes de investir, você precisa saber com quem está falando. Aqui, quem fala com você sou eu. [Nome], da Øliver's."<small>abre já falando, olhando pra câmera · sem mostrar tela de lead nem dado de cliente</small></div>
+    <div class="label">Takes</div>
+    <ol class="takes">
+      <li>Matheus olhando pra câmera, já falando</li>
+      <li>Rotina do atendimento (celular na mão, reunião), sem mostrar dado de lead</li>
+      <li>Ele dizendo o que perguntar na primeira conversa (uma frase)</li>
+      <li>Capital em lettering e assinatura</li>
+    </ol>
+    <div class="row"><span>Copy <b>Franquia Øliver's. Capital a partir de R$ 300 mil. Antes de investir, você precisa saber com quem está falando. Aqui, quem fala com você sou eu.</b></span></div>
+    <div class="row"><span>CTA <b>Fala com a expansão</b> (o brief usa "Fala com a Dai" na versão dela)</span></div>
+  </article>
+
+  <article class="ep">
+    <div class="ep-head"><span class="epn">Reels #01 · Você já sabe o que dá trabalho</span><span class="who">Matheus · 15 a 30 s</span></div>
+    <p class="why">Fala de igual pra igual com quem já toca cozinha: o público com mais chance de ter capital e perfil.</p>
+    <div class="label">Fala</div>
+    <div class="fala">"Você já opera comida. Então já sabe o que dá trabalho. A parte difícil você já conhece. O que falta é marca, processo e central de compras."<small>gravar na cozinha, olhando pra câmera</small></div>
+    <div class="label">Takes</div>
+    <ol class="takes">
+      <li>Dono fechando o caixa, lettering "Você já opera comida." (pode vir do bruto ou de banco)</li>
+      <li>Fornecedor, escala e motoboy em cortes rápidos</li>
+      <li>Matheus na cozinha, olhando pra câmera, com a fala</li>
+      <li>"Øliver's" e capital</li>
+    </ol>
+    <div class="row"><span>Copy <b>Franquia Øliver's para quem já opera comida. Capital a partir de R$ 300 mil. A parte difícil você já conhece. O que falta é marca, processo e central de compras.</b></span></div>
+    <div class="row"><span>CTA <b>Fala com a expansão</b></span></div>
+  </article>
+
+  <article class="ep">
+    <div class="ep-head"><span class="epn">Reels #24 · O que acontece depois que você chama</span><span class="who">Matheus · 20 a 30 s</span></div>
+    <p class="why">Tira o medo do desconhecido e explica o processo antes da reunião.</p>
+    <div class="label">Fala</div>
+    <div class="fala">"O que acontece depois que você chama a expansão? Primeiro, o cadastro. Depois, uma call com o nosso time. Aí vem a visita, a apresentação do modelo e a COF, o documento que você recebe antes de assinar."<small>uma etapa por corte · gravar cada etapa separada, pra editar no ritmo</small></div>
+    <div class="label">Takes</div>
+    <ol class="takes">
+      <li>Gancho com o Matheus, em lettering também</li>
+      <li>As etapas, uma por corte (cadastro · call · visita · apresentação · COF)</li>
+      <li>Imagem real de cada etapa (bruto de reunião do 14/08 serve)</li>
+      <li>Capital e assinatura</li>
+    </ol>
+    <div class="row"><span>Copy <b>Franquia Øliver's. Capital a partir de R$ 300 mil. Cadastro, call, visita, apresentação e COF. Veja o que acontece depois que você chama.</b></span></div>
+    <div class="row"><span>CTA <b>Fala com a expansão</b></span></div>
+    <div class="warn">A Dai ainda não confirmou se a visita a uma unidade pode ser oferecida no anúncio. Gravar a etapa da visita num take separado, pra cortar se ela disser que não.</div>
+  </article>
+</div></section>
+
+<section id="fotos"><div class="wrap">
+  <div class="bloco-head">
+    <div class="qtag">Bloco C · não pular · ~10 min</div>
+    <h2>Fotos <em>pros estáticos</em></h2>
+    <p>Os estáticos seguem prioridade: são o que mais converteu na conta. Cada praça vira estático com gancho e CTA da região, e o rosto do Matheus entra nele. O brief também pede "nova arte com rosto real" no Patrimônio (#19), no Diversificar (#20) e no Quatro sócios (Carrossel #06). Dez minutos de foto do Matheus resolvem a parte dele.</p>
+  </div>
+  <ul class="check">
+    <li>Retrato olhando pra câmera, fundo de operação desfocado (vertical e 4:5)</li>
+    <li>Matheus em ação: na cozinha, conferindo um prato, conversando com a equipe</li>
+    <li>Plano aberto da operação real, sem gente posando (pro #20 e pro #01 estático)</li>
+    <li>Uma foto com espaço livre no centro, pra caber texto respeitando as áreas cobertas</li>
+    <li>Um retrato na cozinha/balcão e um na mesa, pra casar com os estáticos de delivery e de salão das praças</li>
+  </ul>
+</div></section>
+
+<section id="entrevista"><div class="wrap">
+  <div class="bloco-head">
+    <div class="qtag">Bloco D · Matheus responde · ~25 min</div>
+    <h2>Marca, mercado e <em>oportunidade</em></h2>
+    <p>O Matheus responde às dúvidas de quem ainda está decidindo se food service faz sentido como investimento. É a voz que faltava no topo e no meio do funil: menos anúncio, mais conversa de quem está no ramo. Cada resposta vira um Reels de até 30 s, e o bruto longo rende cortes pra semanas.</p>
+  </div>
+
+  <div class="logi" style="margin-top:0;margin-bottom:22px">
+    <dl>
+      <dt>Como gravar</dt><dd>Sentado, olhando pra câmera ou levemente de lado. A Luiza lê a pergunta fora do quadro e <b>o Matheus repete a pergunta no começo da resposta</b>, pra o corte funcionar sem a voz da Luiza.</dd>
+      <dt>Tamanho</dt><dd>Resposta livre (até ~45 s) e, logo depois, a mesma resposta em <b>uma frase só</b>: a versão curta é o gancho do Reels.</dd>
+      <dt>Na edição</dt><dd>Pergunta em lettering no 1º segundo → uma ideia só → assinatura Øliver's. Legenda sempre.</dd>
+    </dl>
+    <p class="note">Ele responde com as palavras dele, puxando pra Øliver's. O Grupo ROB só aparece como respaldo, no máximo numa fala. Os tópicos abaixo são só apoio, caso trave. Nada de prometer retorno, lucro ou payback: o único número de investimento é "a partir de R$ 300 mil".</p>
+  </div>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Referência</th><th>O que pegar</th><th>O que não pegar</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://www.instagram.com/reel/DcMnKWyu5gA/" target="_blank" rel="noopener">"Você investe ou passa?"</a> · @matheusfreitasth</td><td>Veredito rápido sobre situações do ramo, com critérios claros (demanda, recorrência, escala). Vira o quadro <b>"Investe ou passa?"</b> abaixo.</td><td>O CTA "comenta QUERO": no anúncio, quem leva é o botão.</td></tr>
+      <tr><td><a href="https://www.instagram.com/reel/DfwtFXaikQW/" target="_blank" rel="noopener">"Negócio essencial também exige gestão"</a> · @matheusfreitasth</td><td>Lista curta de pilares (demanda, pessoas, processo, lucro), um por corte. Formato da pergunta 2.</td><td>nada a evitar</td></tr>
+      <tr><td><a href="https://www.instagram.com/reel/DfXS158EfVs/" target="_blank" rel="noopener">"Quer empreender ou quer uma empresa pronta?"</a> · @matheusfreitasth</td><td>Gancho de contraste, que faz a pessoa se posicionar. Formato da pergunta 5.</td><td>nada a evitar</td></tr>
+      <tr><td><a href="https://www.instagram.com/reel/DcPBb0buQPj/" target="_blank" rel="noopener">Alerta do custo de entrada</a> · @samyr_castro</td><td>Estrutura alerta → virada → convite. Abre falando de dinheiro sem rodeio. Formato da pergunta 8.</td><td>Preço como chamariz e promessa de retorno. Aqui o capital entra como filtro, não como isca.</td></tr>
+    </tbody>
+  </table></div>
+
+  <article class="ep" style="margin-top:22px">
+    <div class="ep-head"><span class="epn">1 · Vale mais investir em food service do que em outros mercados hoje? Por quê?</span><span class="who">Topo · até 30 s</span></div>
+    <ul class="q">
+      <li>Comida é recorrência: o cliente volta toda semana, não uma vez na vida</li>
+      <li>Dado com fonte na tela: o franchising de alimentação faturou R$ 79,8 bilhões em 2025, alta de 15,6% (Fonte: ABF, Pesquisa de Food Service 2025-2026)</li>
+      <li>Comparar com imóvel, ações ou renda fixa pelo critério, nunca pelo retorno (mesma linha do AD02 que já roda)</li>
+    </ul>
+    <div class="row"><span>CTA <b>Segue a Øliver's e conheça o modelo</b></span><span>Conversa com <b>Estático #14 · Carrossel #03</b></span></div>
+  </article>
+
+  <article class="ep">
+    <div class="ep-head"><span class="epn">2 · O que faz uma marca de alimentação realmente crescer enquanto outras ficam pelo caminho?</span><span class="who">Topo · até 30 s</span></div>
+    <ul class="q">
+      <li>Formato lista, um pilar por corte (ref. "negócio essencial também exige gestão")</li>
+      <li>Sugestão de pilares, ele escolhe e nomeia os dele: padrão de produto · processo e treinamento · compra central · critério de ponto</li>
+      <li>Fecho: "Qual desses falta no seu negócio hoje?"</li>
+    </ul>
+    <div class="row"><span>CTA <b>Segue a Øliver's e conheça o modelo</b></span><span>Conversa com <b>Reels #17 · Carrossel #04</b></span></div>
+  </article>
+
+  <article class="ep">
+    <div class="ep-head"><span class="epn">3 · Como saber se uma marca tem potencial pra continuar crescendo nos próximos anos?</span><span class="who">Meio · até 30 s</span></div>
+    <ul class="q">
+      <li>O sinal mais forte: quem já é franqueado investe de novo (o Erick, multifranqueado na Região dos Lagos)</li>
+      <li>Praças sendo assinadas: Saquarema, São Pedro da Aldeia, Piratininga <b>⚠️ confirmar se são Øliver's</b></li>
+      <li>Números liberados, se quiser: 23 unidades e +70 mil pedidos por mês <b>⚠️ confirmar se são da Øliver's ou do grupo</b> (se forem do grupo, só como respaldo)</li>
+    </ul>
+    <div class="row"><span>CTA <b>Segue a Øliver's e conheça o modelo</b></span><span>Conversa com <b>Reels #04 · Reels #03</b></span></div>
+  </article>
+
+  <article class="ep">
+    <div class="ep-head"><span class="epn">4 · O mercado de food service ainda tem espaço pra novos investidores?</span><span class="who">Topo / praça · até 30 s</span></div>
+    <ul class="q">
+      <li>Expansão é local: tem região com marca e região sem nenhuma</li>
+      <li>Dado com fonte: 87% das redes de franquia do Brasil têm multifranqueados (Fonte: ABF, 2024)</li>
+      <li>Puxa pras praças: a Øliver's está olhando Tijuca, Méier, Barra, Recreio, Macaé e Rio das Ostras</li>
+    </ul>
+    <div class="row"><span>CTA <b>Consulte a sua região</b></span><span>Conversa com <b>Estático #15 · Bloco A (praças)</b></span></div>
+  </article>
+
+  <article class="ep">
+    <div class="ep-head"><span class="epn">5 · Existe um momento certo pra entrar no mercado de franquias?</span><span class="who">Fundo · até 30 s</span></div>
+    <ul class="q">
+      <li>Gancho de contraste (ref. "quer empreender ou quer uma empresa pronta?"): "Você quer começar do zero ou quer uma operação que já funciona?"</li>
+      <li>O momento é quando tem capital e quer operação de verdade, não quando sobra uma ideia</li>
+      <li>Filtro dito por ele: "capital a partir de R$ 300 mil. Não é pra todo mundo."</li>
+    </ul>
+    <div class="row"><span>CTA <b>Fala com a expansão</b></span><span>Conversa com <b>Estático #05</b></span></div>
+  </article>
+
+  <article class="ep">
+    <div class="ep-head"><span class="epn">6 · Como identificar uma oportunidade antes que ela fique saturada?</span><span class="who">Topo · até 30 s</span></div>
+    <ul class="q">
+      <li>Critério de ponto: o que a Øliver's olha antes de abrir, e por que já recusou ponto</li>
+      <li>Dado de região, não intuição. Sem citar número de áreas até a Dai confirmar</li>
+    </ul>
+    <div class="row"><span>CTA <b>Segue a Øliver's para a próxima dica</b></span><span>Conversa com <b>Reels #10</b></span></div>
+  </article>
+
+  <article class="ep">
+    <div class="ep-head"><span class="epn">7 · O que diferencia uma marca promissora de uma moda passageira?</span><span class="who">Topo · até 30 s</span></div>
+    <ul class="q">
+      <li>Produto que o bairro pede toda semana × tendência que some na estação</li>
+      <li>História: a Øliver's nasceu em Maricá, em 2017, e está fazendo 9 anos</li>
+      <li>Sem citar nem alfinetar outra marca</li>
+    </ul>
+    <div class="row"><span>CTA <b>Segue a Øliver's e conheça o modelo</b></span><span>Conversa com <b>Reels #26 · Estático #17</b></span></div>
+  </article>
+
+  <article class="ep">
+    <div class="ep-head"><span class="epn">8 · Se você tivesse R$ 500 mil pra investir hoje, ainda escolheria food service? Por quê?</span><span class="who">Fundo · até 30 s</span></div>
+    <ul class="q">
+      <li>Estrutura alerta → virada → convite (ref. @samyr_castro), sem preço como isca</li>
+      <li>Resposta pessoal dele, em primeira pessoa. É a pergunta mais forte da lista</li>
+      <li>Fecho: uma Øliver's, 9 anos de operação · capital a partir de R$ 300 mil</li>
+    </ul>
+    <div class="row"><span>CTA <b>Fala com a expansão</b></span><span>Conversa com <b>Estático #21 (R$ 500 mil na conta)</b></span></div>
+  </article>
+
+  <article class="ep brown">
+    <div class="ep-head"><span class="epn">Quadro · Investe ou passa?</span><span class="who">Topo · 20 a 30 s · série</span></div>
+    <p class="why">Inspirado na ref. 1. A Luiza lê a situação e o Matheus responde "investe" ou "passa", mais uma frase do porquê. Cada situação é um corte, e 3 ou 4 delas montam um Reels. Fala de coisas do ramo, sem citar marca.</p>
+    <ol class="takes">
+      <li>Restaurante sempre cheio, mas sem processo nenhum</li>
+      <li>Marca que só funciona com o dono no balcão</li>
+      <li>Ponto barato numa rua sem movimento</li>
+      <li>Pizzaria que só vende no salão, sem delivery</li>
+      <li>Abrir franquia usando todo o capital, sem sobrar pro giro</li>
+      <li>Negócio "chato", mas que todo mundo usa toda semana</li>
+    </ol>
+    <div class="row"><span>CTA <b>Segue a Øliver's para o próximo</b></span></div>
+  </article>
+</div></section>
+
+<section id="topo"><div class="wrap">
+  <div class="bloco-head">
+    <div class="qtag">Bloco E · topo de funil · ~15 min</div>
+    <h2>Topo: <em>atrair quem tem capital</em></h2>
+    <p>Duas peças que não falam de franquia na primeira frase: puxam o público certo pelo problema dele. Rodam no topo (visualização de vídeo + seguidores da Øliver's). Ficam em reserva se a quinta apertar.</p>
+  </div>
+
+  <article class="ep brown">
+    <div class="ep-head"><span class="epn">Reels #11 · Restaurante cheio ainda perde dinheiro</span><span class="who">Matheus · até 30 s</span></div>
+    <p class="why">Atrai quem já vive o problema, sem falar de franquia.</p>
+    <div class="label">Fala</div>
+    <div class="fala">"Por que restaurante cheio ainda perde dinheiro? [Uma dica em uma frase.] Segue a Øliver's pra próxima."<small>a dica é dele: sugestão a partir do Carrossel #04 · CMV, taxa do iFood, motoboy ou estoque · sem número</small></div>
+    <div class="label">Takes</div>
+    <ol class="takes">
+      <li>Gancho na cozinha</li>
+      <li>A conta na mão, em papel ou no celular</li>
+      <li>A dica em uma frase, com lettering</li>
+      <li>Assinatura Øliver's</li>
+    </ol>
+    <div class="row"><span>CTA <b>Segue a Øliver's para a próxima dica</b></span></div>
+    <p class="why" style="margin-top:12px">Vale gravar as 4 dicas (CMV, iFood, motoboy, estoque), uma por take: viram 4 Reels e ainda servem de base pro Carrossel #04.</p>
+  </article>
+
+  <article class="ep brown">
+    <div class="ep-head"><span class="epn">Reels #30 · Um segundo negócio</span><span class="who">Matheus · até 20 s</span></div>
+    <p class="why">Fala com quem tem capital fora do ramo: médico, veterinário, imobiliário.</p>
+    <div class="label">Fala</div>
+    <div class="fala">"Você tem clínica e pensa em um segundo negócio? Muita gente de outras áreas olha pra alimentação. Conheça a franquia Øliver's."<small>variações pra gravar: "Você tem clínica…" · "Você é do mercado imobiliário…" · "Você já tem um negócio que roda sem você…"</small></div>
+    <div class="label">Takes</div>
+    <ol class="takes">
+      <li>Gancho com a profissão, em lettering</li>
+      <li>Rotina do profissional (banco de imagem)</li>
+      <li>Corte pra operação</li>
+      <li>Assinatura Øliver's</li>
+    </ol>
+    <div class="row"><span>CTA <b>Segue a Øliver's e conheça o modelo</b></span></div>
+  </article>
+</div></section>
+
+<section id="bruto"><div class="wrap">
+  <div class="kicker">Pra edição</div>
+  <h2>Material bruto <em>que ainda não foi usado</em></h2>
+  <p>A Manu separou dois blocos de bruto que nunca entraram em anúncio. Junto com esta gravação, eles cobrem peças do brief que são "só edição".</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Bruto</th><th>Vira</th><th>Atenção</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://drive.google.com/drive/folders/1oxMly-qjpRQwBaFuRLBmH96YQRFRfpqt" target="_blank" rel="noopener">14/08 · Gravação Erick · Multifranqueado</a></td><td>Reels #12 (Erick em 15 s) · Reels #04 (Erick: investir de novo) · imagens de reunião pro #24</td><td>Falta a autorização de imagem do Erick pra anúncio</td></tr>
+      <tr><td><a href="https://drive.google.com/drive/folders/1F2WwMmqKcUL9hB4C6bq5joo6hr5LBD5u" target="_blank" rel="noopener">05/08 · Conteúdos Novas Franquias</a></td><td>Falas do Matheus pra completar #08, #23 e #24 · cortes pras versões Øliver's por praça</td><td>Conferir se roupa e lugar não repetem o que for gravado agora</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:14px;margin-top:14px">Nome de arquivo pelo conteúdo, sem acento, no padrão do brief, com praça e versão: <b>AD08 - ROB - Reels - Geral (Nov26)</b> · <b>AD22 - ROB - Reels - Tijuca - Delivery (Nov26)</b> · <b>AD22 - ROB - Reels - Tijuca - Salao (Nov26)</b>.</p>
+</div></section>
+
+<section id="regras"><div class="wrap">
+  <div class="kicker">Hook, copy e CTA</div>
+  <h2>Sempre e <em>nunca</em></h2>
+  <div class="regras">
+    <div class="sim"><h3>Sempre</h3><ul>
+      <li>Gente ou operação no 1º segundo, falando com a pessoa certa</li>
+      <li>Nas peças de conversão, a primeira linha diz franquia Øliver's e capital</li>
+      <li>Uma ideia só por vídeo, até 30 s, com legenda e corte rápido</li>
+      <li>Cada take muda roupa, lugar e fala</li>
+      <li>Claquete falada antes de cada take</li>
+      <li>Dado com fonte e ano ("Fonte: ABF, 2025")</li>
+      <li>Assinatura Øliver's no último frame</li>
+      <li>9:16, com rosto e texto no centro: os 14% de cima e os 35% de baixo ficam cobertos</li>
+    </ul></div>
+    <div class="nao"><h3>Nunca</h3><ul>
+      <li>Prometer faturamento, lucro ou payback, nem número fora da Tabela Oficial (só "a partir de R$ 300 mil", 23 unidades e +70 mil pedidos/mês)</li>
+      <li>"Grupo ROB" como chamada principal ou multimarca no gancho: o grupo entra só como respaldo</li>
+      <li>A palavra "vaga", que atrai quem procura emprego</li>
+      <li>"Link da bio" em anúncio: quem leva é o botão</li>
+      <li>Parede branca, abertura com logo ou vídeo longo</li>
+      <li>Dizer que a marca entra na cozinha de quem ainda não é franqueado</li>
+      <li>"Premium", "multiplique a receita", peça de cardápio ou emoji na arte</li>
+      <li>Citar ou repetir frase de concorrente</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section id="pend"><div class="wrap">
+  <div class="kicker">Antes de subir</div>
+  <h2>Pendências <em>que travam peça</em></h2>
+  <div class="tbl"><table>
+    <thead><tr><th>O quê</th><th>Quem responde</th><th>Trava</th></tr></thead>
+    <tbody>
+      <tr><td>Dia (quarta 18/11 ou quinta 19/11), horário, local e duração da gravação</td><td>Matheus</td><td>Este roteiro</td></tr>
+      <tr><td>Méier e Recreio têm salão?</td><td>Dai / Ghost</td><td>Versão salão do gancho (Bloco A)</td></tr>
+      <tr><td>"A partir de R$ 300 mil", 23 unidades e +70 mil pedidos/mês valem pra Øliver's ou são do grupo?</td><td>Dai / Matheus</td><td>Copy de conversão · pergunta 3</td></tr>
+      <tr><td>A visita a uma unidade pode ir no anúncio?</td><td>Dai</td><td>Reels #24 · Estático #13</td></tr>
+      <tr><td>Autorização de imagem do Erick pra anúncio</td><td>Matheus / Erick</td><td>Reels #12 e #04</td></tr>
+      <tr><td>Aprovação dos vídeos e estáticos</td><td>Manu</td><td>Entrega à Ghost na quinta (19/11)</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<footer><div class="wrap">
+  Fonte: brief da Performance (Ghost) · ROB · Gestão de Criativos Nov26 · direcionamento de conteúdos de expansão Øliver's (Manu) · calls de expansão de 06/11, 13/11 e 17/11 · issue dev-seven7/cs-rob-food#127.<br>
+  Dados das praças: bares e restaurantes por bairro, RAIS e estudo Rio Gastronomia 2026 (Diário do Rio) · população dos bairros: Diário do Rio · Macaé: IBGE Cidades · Rio das Ostras: Censo 2022 via Monitor do Mercado · Barra e Recreio: UnB, PUC-Rio. Populações variam conforme a fonte, por isso "cerca de".<br>
+  Roteiro: Luiza Meneses (Seven7) · aprovação: Manu · tráfego: Celso e Luiz (Ghost).
+</div></footer>
+
+</body>
+</html>
